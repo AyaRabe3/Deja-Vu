@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://devavu-79076.firebaseio.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

@@ -1,0 +1,144 @@
+<div class="contact-container">
+
+    <div class="contactHeader">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <p class="BoldTitle">Contact US</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="GetInTouch">
+        <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="grayTitle">Get
+                    <span class="redTitle"> In </span>
+                    Touch</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-7">
+                <p class="para">
+                    We are happy to answer any question you have, we would love to hear from you,
+                    We aim to achieve your satisfaction, feel free to contact us for any inquiries or information.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="map">
+        <div class="row">
+            <div class="col-12">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe height="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=%D8%A7%D9%84%D9%85%D9%86%D8%B5%D9%88%D8%B1%D8%A9%20&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://kissanime-ws.com">x</a></div>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 500px;
+                        }
+
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 500px;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contactForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="grayTitle">Contact
+                        <span class="redTitle"> Details </span>
+                    </p>
+
+                    <p class="para">
+                        We are ready to answer any question you have and looking forward to hear from you.
+                        Get in touch with us, we are all ears.
+                    </p>
+                    <div class="information">
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="icon">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </span>
+                                <span class="info">Ahmed Maher st, AlKarnak Tower 1st floor, Mansoura, 35511</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="icon">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </span>
+                                <span class="info">+20 50 239 4343</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="icon">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </span>
+                                <span class="info">+20 11111 69 507 - +20 11111 69 537</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="icon">
+                                    <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                                </span>
+                                <span class="info">info@deja-vu.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12  col-md-6">
+                    <form method="get" action="" #f=ngForm (ngSubmit)="SendMsg(f.value)">
+                        <input class="form-control" type="text" name="Name" placeholder="Your Name" ngModel #Name="ngModel"
+                             required>
+                        <div class="alert alert-danger" role="alert" *ngIf="Name.invalid && Name.touched">Name is
+                            required
+                        </div>
+
+                        <input class="form-control" type="email" name="Email" placeholder="Your Email" ngModel #Email="ngModel"
+                         required email>
+                        <div class="alert alert-danger" role="alert" *ngIf="Email.invalid && Email.touched">Email is
+                            required</div>
+                        <div class="alert alert-danger" role="alert" *ngIf="Email.errors?.email && Email.touched">Email
+                            format is not
+                            correct</div>
+
+                        <input class="form-control" type="text" name="Subject" placeholder="Subject" ngModel #Subject="ngModel"
+                        required>
+                        <div class="alert alert-danger" role="alert" *ngIf="Subject.invalid && Subject.touched">Subject
+                            is
+                            required
+                        </div>
+
+                        <textarea class="form-control" name="msg" placeholder="Message" rows="6" ngModel #msg="ngModel"
+                        required></textarea>
+                        <div class="alert alert-danger" role="alert" *ngIf="msg.invalid && msg.touched">Message
+                            is
+                            required
+                        </div>
+                        <button type="submit" class="btn btn-block" [disabled]="f.invalid">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

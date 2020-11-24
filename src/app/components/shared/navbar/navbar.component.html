@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="container navContainer">
+    <a class="navbar-brand" routerLink="/" >
+    <img class="img-fluid" src="../../../../assets/images/LOGO.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutUs">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Our Services</a>
+        </li>
+       
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            business entities
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink="/">marketing</a>
+            <a class="dropdown-item"  routerLink="/">sales</a>
+            <a class="dropdown-item"  routerLink="/">Event Management</a>
+            <a class="dropdown-item"  routerLink="/">Organizational Development</a>
+            <a class="dropdown-item"  routerLink="/">HR & Training</a>
+            <a class="dropdown-item"  routerLink="/">IT services</a>
+
+          </div>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/"> individuals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contactUs"> contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/LogIn" *ngIf="!isUser"> LogIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/" *ngIf="isUser"> Welcome user</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
