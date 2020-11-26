@@ -39,11 +39,15 @@
             <a class="nav-link" routerLink="/contactUs"> contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  routerLink="/LogIn" *ngIf="!isUser"> LogIn</a>
+            <a class="nav-link"  routerLink="/LogIn"  *ngIf="!appService.loggedin()"style="cursor:pointer;color:rgb(148, 11, 11);" >LogIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  routerLink="/" *ngIf="isUser"> Welcome user</a>
+            <a class="nav-link"  routerLink="/" *ngIf="appService.loggedin()" > "Welcome"</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/" style="cursor:pointer;color:rgb(148, 11, 11);"  *ngIf="appService.loggedin()"  (click)="appService.logoutUser()"> LogOut</a>
+          </li>
+
       </ul>
     </div>
   </div>

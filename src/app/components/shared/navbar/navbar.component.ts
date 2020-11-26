@@ -7,12 +7,10 @@ import { AuthenticationService } from 'src/app/authentication.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  isUser:boolean
-  constructor(private appService:AuthenticationService) { }
+  constructor(public appService:AuthenticationService) { }
 
   ngOnInit(): void {
-    this.appService.currentUserStatus.subscribe(data=>this.isUser=data)
-    console.log('navbar ts',this.isUser)
+
   }
 
 }

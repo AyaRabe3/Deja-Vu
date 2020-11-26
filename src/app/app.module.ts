@@ -14,10 +14,14 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
  
 import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './components/login/login.component';
+import { TokenInterceptorService  } from 'src/app/token-interceptor.service';
+import { AuthenticationService } from './authentication.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +44,13 @@ import { LoginComponent } from './components/login/login.component';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],
-  providers: [],
+  providers: [AuthenticationService,
+  {
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptorService,
+    multi:true
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

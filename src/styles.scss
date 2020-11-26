@@ -236,7 +236,7 @@ nav {
     transition-duration: 1s;
     transition-property: transform, opacity;
     opacity: 0;
-    transform: rotateY(180deg);
+    transform: rotateX(90deg);
 
      p {
 
@@ -273,7 +273,7 @@ nav {
     transition-duration: 1s;
     transition-property: transform, opacity;
     opacity: 1;
-    transform: rotateY(0deg);
+    transform: rotateX(0deg);
 
      img {
       width: 5vw;
@@ -294,12 +294,12 @@ nav {
   &:hover {
     & > .outer-content-wrapper-front {
       opacity: 0;
-      transform: rotateY(180deg);
+      transform: rotateX(90deg);
     }
 
     & > .outer-content-wrapper-back {
       opacity: 1;
-      transform: rotateY(0deg);
+      transform: rotateX(0deg);
     }
   }
 }
@@ -739,7 +739,7 @@ nav {
             }
              .foot-icons{
                 text-align: center;
-                 span{
+                 a{  text-decoration: none;
                     display: inline-block;
                     margin-top: 10px;
                      i{
